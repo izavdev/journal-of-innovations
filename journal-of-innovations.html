@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Journal of Innovations</title>
+<meta name="color-scheme" content="light dark">
+<style>
+:root{
+  --bg:#ffffff;--fg:#1f2937;--muted:#6b7280;--accent:#0f6cbd;--accent-soft:#e8f1fb;
+  --border:#e5e7eb;--card:#f9fafb;--warn:#b45309;--warn-soft:#fff7ed;
+  --space:1rem;--max:60rem;color-scheme:light dark;
+}
+@media (prefers-color-scheme: dark){
+  :root{--bg:#0b1220;--fg:#f3f4f6;--muted:#9ca3af;--accent:#60a5fa;--accent-soft:#132338;
+  --border:#1f2937;--card:#111a2b;--warn:#fbbf24;--warn-soft:#2a1f0d;}
+}
+a{color:var(--accent);text-underline-offset:.15em}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:"Segoe UI",-apple-system,Roboto,Helvetica,Arial,sans-serif;line-height:1.5;font-size:15px;text-align:start}
+.page{max-width:var(--max);margin-inline:auto;padding-block:calc(var(--space)*1.5);padding-inline:var(--space)}
+header{border-block-end:3px solid var(--accent);padding-block-end:.75rem;margin-block-end:1rem}
+.eyebrow{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700;margin:0}
+h1{font-size:2.1rem;margin:.15rem 0 .35rem;line-height:1.15}
+.oneliner{font-size:1.15rem;margin:0;font-style:italic}
+h2{font-size:1rem;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);margin:0 0 .5rem}
+p{margin:0 0 .5rem}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:var(--space);margin-block-end:var(--space)}
+.box{background:var(--card);border:1px solid var(--border);border-radius:.5rem;padding:.8rem 1rem}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin:0 0 var(--space);padding:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;border:1px solid var(--border);border-radius:.5rem;padding:.6rem .75rem .6rem 2.6rem;position:relative;background:var(--bg)}
+.steps li::before{content:counter(s);position:absolute;inset-inline-start:.65rem;inset-block-start:.6rem;width:1.5rem;height:1.5rem;border-radius:50%;background:var(--accent);color:var(--bg);font-weight:700;font-size:.85rem;display:flex;align-items:center;justify-content:center}
+.steps b{display:block}
+.steps span{color:var(--muted);font-size:.85rem}
+.rule{background:var(--warn-soft);border-inline-start:5px solid var(--warn);border-radius:.4rem;padding:.75rem 1rem;margin-block-end:var(--space)}
+.rule h2{color:var(--warn)}
+ul{margin:0;padding-inline-start:1.1rem}
+li{margin-block-end:.2rem}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+td{padding:.3rem .5rem;border-block-end:1px solid var(--border);vertical-align:top;text-align:start}
+td:first-child{font-weight:600;white-space:nowrap;color:var(--accent);width:1%}
+.flow{display:flex;gap:.4rem;align-items:center;justify-content:center;flex-wrap:wrap;margin:.25rem 0 var(--space);font-weight:600;font-size:.9rem}
+.flow span{background:var(--accent-soft);color:var(--fg);border-radius:999px;padding:.3rem .8rem}
+.flow i{color:var(--muted);font-style:normal}
+footer{color:var(--muted);font-size:.8rem;border-block-start:1px solid var(--border);padding-block-start:.5rem;text-align:center}
+@media (max-width:720px){.grid2,.steps{grid-template-columns:1fr}}
+@media print{
+  :root{--bg:#fff;--fg:#000;--muted:#444;--card:#f6f6f6;--border:#bbb}
+  @page{size:A4;margin:12mm}
+  body{font-size:11.5px}
+  .page{padding:0;max-width:none}
+  h1{font-size:1.7rem}
+  .box,.steps li,.rule,tr{break-inside:avoid}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+<main class="page">
+<header>
+  <p class="eyebrow">Concept one-pager</p>
+  <h1>Journal of Innovations</h1>
+  <p class="oneliner">Every change is a hypothesis. Measure consistently, judge the evidence honestly, and preserve what you learn.</p>
+</header>
+
+<div class="grid2">
+  <section class="box">
+    <h2>The idea in simple words</h2>
+    <p>A shared log where every change to how we work (a new tool, step, rule or ritual) is recorded as a small experiment.</p>
+    <p>Before changing anything, we write down <b>what</b> we change, <b>what we expect</b> to happen and <b>how we'll know</b>. We measure before, make the change, and measure again in exactly the same way.</p>
+  </section>
+  <section class="box">
+    <h2>Why it matters</h2>
+    <ul>
+      <li>Changes are often introduced and assumed to help, but nobody checks.</li>
+      <li>Good ideas go unnoticed, and bad ones quietly stay in place.</li>
+      <li>Discussions rely on gut feeling instead of evidence.</li>
+      <li>The journal builds team memory of what works and what doesn't.</li>
+    </ul>
+  </section>
+</div>
+
+<div class="flow" aria-label="Cycle"><span>Hypothesis</span><i>&rarr;</i><span>Measure before</span><i>&rarr;</i><span>Implement</span><i>&rarr;</i><span>Measure after</span><i>&rarr;</i><span>Decide</span></div>
+
+<h2>How it works</h2>
+<ol class="steps">
+  <li><b>Describe the innovation</b><span>What exactly are we changing?</span></li>
+  <li><b>State the hypothesis</b><span>What effect do we expect, and why?</span></li>
+  <li><b>Pick the metrics</b><span>Which 1–3 numbers will show the effect?</span></li>
+  <li><b>Fix the measurement method</b><span>Data source, formula and time window</span></li>
+  <li><b>Measure the "before"</b><span>Record the baseline: where are we today?</span></li>
+  <li><b>Implement, measure the "after"</b><span>Compare, then keep, adjust or roll back</span></li>
+</ol>
+
+<section class="rule">
+  <h2>The golden rule</h2>
+  <p style="margin:0">Use the <b>same calculation method</b> for "before" and "after": the same formula, data source, scope and length of time window. If the method changes, recompute both periods or mark the comparison as limited. Consistent measurement shows what changed; a stronger comparison is needed to isolate why.</p>
+</section>
+
+<div class="grid2">
+  <section class="box">
+    <h2>Journal entry template</h2>
+    <table>
+      <tr><td>Innovation</td><td>What is being introduced</td></tr>
+      <tr><td>Owner / start</td><td>Who is responsible, and from when</td></tr>
+      <tr><td>Hypothesis</td><td>"If we do X, metric Y will change by about Z, because…"</td></tr>
+      <tr><td>Metrics / why</td><td>One primary outcome and 1–2 supporting or guardrail metrics; explain their relevance and limits</td></tr>
+      <tr><td>Expectation</td><td>Predicted magnitude and its basis, recorded before seeing results</td></tr>
+      <tr><td>Method</td><td>Formula, data source, time window (same before and after)</td></tr>
+      <tr><td>Success criteria</td><td>What counts as "it worked", set upfront</td></tr>
+      <tr><td>Before / After</td><td>Values and the periods they cover</td></tr>
+      <tr><td>Comparison design</td><td>Before/after, comparison group or randomized trial; units, periods and assumptions</td></tr>
+      <tr><td>Alternative explanations</td><td>What else could explain the change, and how to check it</td></tr>
+      <tr><td>Evidence and limits</td><td>What was observed, what can be attributed, and what remains uncertain</td></tr>
+      <tr><td>Decision</td><td>Keep, adjust or roll back, plus learnings</td></tr>
+    </table>
+  </section>
+  <section class="box">
+    <h2>Example: feeling versus evidence</h2>
+    <table>
+      <tr><td>Innovation</td><td>A checklist for code reviews (synthetic example)</td></tr>
+      <tr><td>Expectation</td><td>30% less waiting for a first review; basis: intuition</td></tr>
+      <tr><td>Metric / why</td><td>Mean elapsed hours to first substantive review: measures author waiting, not mental effort</td></tr>
+      <tr><td>Method</td><td>Same team, two 28-day request cohorts, seven-day follow-up; cap each wait at 168 hours, including unreviewed requests</td></tr>
+      <tr><td>Success</td><td>At least 15% lower waiting; no increase in seven-day corrective-follow-up rate</td></tr>
+      <tr><td>Result</td><td>20 hours before, 19 after: 1 hour / 5% lower. Target missed; guardrail unchanged in observed data</td></tr>
+      <tr><td>Limits</td><td>Before/after only; request complexity unmeasured. Causal contribution and precision uncertain</td></tr>
+      <tr><td>Decision</td><td>Keep provisionally because upkeep is judged low; reassess under a new plan. Do not declare success</td></tr>
+    </table>
+  </section>
+</div>
+
+<section class="box" style="margin-block-end:var(--space)">
+  <h2>Good example / bad example</h2>
+  <p>The same checklist, two ways to describe it. These are synthetic examples; a good entry can record a missed target.</p>
+  <div class="grid2">
+    <section>
+      <h3>Bad: a convincing story</h3>
+      <p>“Reviews feel 30% faster. Forty reviews used the checklist, so it works. Waiting fell from 20 to 19 hours. Any improvement is a success—roll it out everywhere.”</p>
+      <p><b>Why it fails:</b> feeling becomes a number, adoption becomes proof, and the original success threshold disappears. Other explanations go unchecked.</p>
+    </section>
+    <section>
+      <h3>Good: a useful record</h3>
+      <p>“We expected 30% less waiting and set a 15% minimum improvement upfront. With the same measurement method, waiting fell from 20 to 19 hours: <b>5%, so the target was missed</b>. The observed quality guardrail was unchanged.”</p>
+      <p>“Before/after alone cannot isolate the checklist’s effect; request complexity was unmeasured. Keep provisionally because upkeep is judged low; the owner will reassess under a new plan.”</p>
+      <p><b>Why it works:</b> expectation, measurement, uncertainty and decision remain distinct.</p>
+    </section>
+  </div>
+  <p>Read the <a href="examples/good-and-bad.md">full comparison and why each choice matters</a>, including metric relevance, collection rules and how to repair a weak entry.</p>
+</section>
+
+<section class="box" style="margin-block-end:var(--space)">
+  <h2>Keeping it honest</h2>
+  <ul>
+    <li><b>Write the hypothesis and success criteria first</b>, before any results come in, so nobody can move the goalposts.</li>
+    <li><b>Reduce competing changes</b> where possible, and record alternative explanations. One change at a time does not eliminate background trends.</li>
+    <li><b>Compare equal periods</b> that are long enough to smooth out random ups and downs.</li>
+    <li><b>Keep perception separate from measurement.</b> If you expected 30% but measured 5%, report 5%. A different benefit becomes a new hypothesis.</li>
+    <li><b>Log failures and inconclusive results too.</b> A change that didn't work is still useful knowledge.</li>
+    <li><b>Watch for side effects.</b> Improving one metric can make another one worse.</li>
+  </ul>
+</section>
+
+<section class="box" style="margin-block-end:var(--space)">
+  <h2>Match the claim to the evidence</h2>
+  <p><b>Before / after:</b> “The metric improved after the change.” <b>Comparison group:</b> “Our improvement exceeded the comparison group’s,” subject to comparable trends and conditions. <b>Randomized trial:</b> stronger causal evidence when assignment, collection and analysis are sound.</p>
+  <p>Choose a design proportionate to the decision. Separate the practical choice to keep something from confidence that it caused an improvement. A small observed difference alone establishes neither a reliable benefit nor no effect.</p>
+</section>
+<section class="box" style="margin-block-end:var(--space)">
+  <h2>Use the approach, in your own tools</h2>
+  <p>This is a concept and toolkit, not an app. Keep your journal wherever your team works.</p>
+  <p>Start with the <a href="README.md">repository guide</a>, <a href="docs/approach.md">approach</a>, <a href="templates/journal-entry.md">entry template</a> and <a href="examples/review-checklist.md">worked example</a>. Guided skills help you <a href="skills/journal-entry/SKILL.md">draft an entry</a>, <a href="skills/journal-metrics/SKILL.md">define relevant measurements</a> and <a href="skills/journal-review/SKILL.md">review evidence</a>.</p>
+</section>
+
+<footer>Journal of Innovations · Concept by Ivan Zavialov · November 2026</footer>
+</main>
+</body>
+</html>
