@@ -8,7 +8,7 @@ It is a method and a toolkit, not an application. Use a document, spreadsheet, i
 
 ## Start here
 
-1. Open [the concept overview](journal-of-innovations.html) in a browser.
+1. Open [the concept overview](index.html) in a browser.
 2. Read [the approach](docs/approach.md), including how to separate perception, measurement, and attribution.
 3. Copy [the entry template](templates/journal-entry.md), or work through it with the skills below.
 4. See [a worked example](examples/review-checklist.md) where an expected 30% improvement turns out to be 5%.
