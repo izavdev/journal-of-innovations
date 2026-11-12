@@ -5,7 +5,7 @@ description: Turn vague improvement claims into relevant numerical metrics with 
 
 # Metric design guide
 
-Read `../../docs/approach.md` and the measurement-contract section of `../../templates/journal-entry.md`. If installed separately, resolve them from the user-provided repository location; ask if unavailable.
+Use `docs/approach.md` from a local Journal of Innovations checkout when available. Otherwise, read [the shared approach](https://github.com/izavdev/journal-of-innovations/blob/main/docs/approach.md). Also read the measurement-contract section of [the entry template](references/journal-entry.md) bundled with this skill.
 
 ## Workflow
 

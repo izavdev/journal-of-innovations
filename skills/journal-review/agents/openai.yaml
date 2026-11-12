@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review journal evidence"
+  short_description: "Evaluate results and decide what to do"
+  default_prompt: "Use $journal-review to assess these results against the original plan."

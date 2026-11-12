@@ -1,0 +1,4 @@
+interface:
+  display_name: "Draft a journal entry"
+  short_description: "Plan a measurable workplace experiment"
+  default_prompt: "Use $journal-entry to help me plan and document a workplace change."

@@ -24,11 +24,31 @@ These are portable Markdown instructions for an AI assistant. They guide a conve
 | [Journal metrics](skills/journal-metrics/SKILL.md) | You need to turn “better” into something measurable | Metric definitions with rationale, formulas, and limitations |
 | [Journal review](skills/journal-review/SKILL.md) | You have results and need to decide what they mean | A numerical comparison, evidence limits, and a decision |
 
-For an assistant that supports `SKILL.md` packages, copy the desired skill directory into its configured skills location, following that assistant’s instructions. Keep this repository accessible: the skills use its approach and template, with relative paths when run in place. If installed separately, provide the repository path. No installation is required to use the guidance manually.
+### Install with the cross-agent wizard
 
-Example prompt:
+Run this from the project where you want to use the skills:
 
-> Use skills/journal-entry/SKILL.md in this repository to help me evaluate a new code-review checklist. I think it will make reviews 30% faster. Help me define what “faster” means, choose defensible measurements, and explain what the evidence could actually establish.
+```bash
+npx skills@latest add izavdev/journal-of-innovations
+```
+
+Select all three skills and choose your client. Each skill bundles the entry template and links to the same [approach](docs/approach.md). The shared approach is available from a local checkout or on GitHub.
+
+In Codex, try `$journal-entry`. In Claude Code, try `/journal-entry`. In GitHub Copilot, ask to use the `journal-entry` skill. For a Copilot-only install:
+
+```bash
+npx skills@latest add izavdev/journal-of-innovations --agent github-copilot
+```
+
+Example prompt for Codex:
+
+> Use $journal-entry to help me evaluate a new code-review checklist. I think it will make reviews 30% faster. Help me define “faster,” choose measurements, and explain what the evidence could establish.
+
+### Managed plugin bundles
+
+The [Codex manifest](.codex-plugin/plugin.json) and [Claude Code manifests](.claude-plugin/) bundle the same three skills. Choose one installation method per client to avoid duplicate skill entries.
+
+Edit the approach in `docs/approach.md`. When editing the entry template, update the copies under each skill's `references/` directory.
 
 ## What good looks like
 

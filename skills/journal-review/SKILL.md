@@ -5,7 +5,7 @@ description: Review innovation experiment results against the original plan, cal
 
 # Evidence review guide
 
-Read `../../docs/approach.md` and `../../templates/journal-entry.md`, resolving them from the user-provided repository if installed separately. Ask for the location if unavailable.
+Use `docs/approach.md` from a local Journal of Innovations checkout when available. Otherwise, read [the shared approach](https://github.com/izavdev/journal-of-innovations/blob/main/docs/approach.md). Also read [the entry template](references/journal-entry.md) bundled with this skill.
 
 ## Workflow
 

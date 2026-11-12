@@ -1,0 +1,21 @@
+{
+  "name": "journal-of-innovations",
+  "version": "0.1.0",
+  "description": "Skills for planning workplace experiments, defining metrics, and reviewing evidence.",
+  "author": {
+    "name": "Ivan Zavialov",
+    "url": "https://github.com/izavdev"
+  },
+  "homepage": "https://izavdev.github.io/journal-of-innovations/",
+  "repository": "https://github.com/izavdev/journal-of-innovations",
+  "keywords": [
+    "experiments",
+    "metrics",
+    "evidence"
+  ],
+  "skills": [
+    "./skills/journal-entry",
+    "./skills/journal-metrics",
+    "./skills/journal-review"
+  ]
+}

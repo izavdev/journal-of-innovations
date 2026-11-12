@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design journal metrics"
+  short_description: "Define relevant and reproducible metrics"
+  default_prompt: "Use $journal-metrics to define and explain metrics for this change."

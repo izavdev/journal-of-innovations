@@ -1,0 +1,21 @@
+{
+  "name": "journal-of-innovations",
+  "owner": {
+    "name": "Ivan Zavialov",
+    "url": "https://github.com/izavdev"
+  },
+  "description": "Skills for planning workplace experiments, defining metrics, and reviewing evidence.",
+  "plugins": [
+    {
+      "name": "journal-of-innovations",
+      "source": "./",
+      "description": "Skills for planning workplace experiments, defining metrics, and reviewing evidence.",
+      "category": "productivity",
+      "keywords": [
+        "experiments",
+        "metrics",
+        "evidence"
+      ]
+    }
+  ]
+}
